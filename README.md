@@ -3,7 +3,7 @@
 [![Go.Dev](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white)](https://pkg.go.dev/github.com/nickname32/discordhook@v1.0.0?tab=doc)
 [![Go Report Card](https://goreportcard.com/badge/github.com/nickname32/discordhook)](https://goreportcard.com/report/github.com/nickname32/discordhook)
 
-This module is made for those, who wants only use Discord webhooks. If you want more from Discord API, i would suggest you to use [disgord](https://github.com/andersfylling/disgord).
+This module is made for those, who wants to only use Discord webhooks. If you want more from Discord API, i would suggest you to use [disgord](https://github.com/andersfylling/disgord).
 
 ## Where to find webhook ID and token
 
@@ -38,7 +38,7 @@ func main() {
         Content: "Example text",
         Embeds: []*discordhook.Embed{
             {
-                Title:       "Hi",
+                Title:       "Hi there",
                 Description: "This is description",
             },
         },
@@ -50,7 +50,7 @@ func main() {
     fmt.Println(msg.ID)
 
     wh, err = wa.Modify(nil, &discordhook.WebhookModifyParams{
-        Name: "This is new default webhook name",
+        Name: "This is a new default webhook name",
     })
     if err != nil {
         panic(err)
